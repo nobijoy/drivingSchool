@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAF7;
+    overflow-x: hidden !important;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+nav {
+    height: 10vh;
+}
+
+footer,
+.menu-con {
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*custom classes*/
+
+
+.primary-bg{
+    background-color: #A020F0;
+}
+
+.secondary-bg{
+    background-color: #20F0A0;
+}
+
+.primary-col{
+    color: #A020F0;
+}
+
+.secondary-col{
+    color: #20F0A0;
+}
+
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #F020E0;
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control the darkness */
+    z-index: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff; /* Set the text color */
+}
+
+.btn.primary-bg:hover{
+    background-color: #F020f0;
+}
+
+.custom-hr {
+    border: none; /* Remove the default border */
+    height: 5px; /* Set the height of the line */
+    background-color: #F020E0; /* Set the color of the line */
+    margin: 20px 0; /* Add margin above and below the line */
+}
+
+.nav-link:hover{
+    color: #F020E0 !important;
+}
+
+
+
+
+
+
+
+ /*media queries*/
+
+@media only screen and (min-width: 1376px) {
+    .carousel-item {
+        height: 100vh;
+    }
+    .front-logo {
+        height: 10vh;
+        width: auto;
+    ;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .front-logo {
+        height: 10vh;
+        width: auto;
+        ;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .front-logo {
+        height: 10vh;
+        width: auto;
+        ;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .front-logo {
+        height: 10vh;
+        width: auto;
+        ;
+    }
+}
+
+:disabled {
+    cursor: not-allowed;
+}
