@@ -5,14 +5,14 @@
 @section('body')
 
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+    <div id="carouselHero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
          data-bs-pause="false" >
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
         </div>
 {{--        @if ($home->carousel)--}}
@@ -33,9 +33,9 @@
                 <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
                     <h1 class="fw-bolder mb-2">Individually Tailored Driving Programs for Based on Skills</h1>
                     <hr class="custom-hr">
-                    <p class="fw-bold mb-2">Because Professional training Matters</p>
-                    <button class="btn primary-bg text-white fw-bold">Get Enrolled</button>
-                    <button class="btn primary-bg text-white fw-bold">Learn More</button>
+                    <p class=" mb-2">Because Professional training Matters</p>
+                    <button class="btn primary-bg text-white fw-bold">Get Enrolled <i class="fa fa-arrow-right-long"></i></button>
+                    <button class="btn primary-border text-white fw-bold">Learn More <i class="fa fa-arrow-right-long"></i></button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -43,9 +43,9 @@
                 <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
                     <h1 class="fw-bolder mb-2">Individually Tailored Driving Programs for Based on Skills</h1>
                     <hr class="custom-hr">
-                    <p class="fw-bold mb-2">Because Professional training Matters</p>
-                    <button class="btn primary-bg text-white fw-bold">Get Enrolled</button>
-                    <button class="btn primary-bg text-white fw-bold">Learn More</button>
+                    <p class=" mb-2">Because Professional training Matters</p>
+                    <button class="btn primary-bg text-white fw-bold">Get Enrolled <i class="fa fa-arrow-right-long"></i></button>
+                    <button class="btn primary-border text-white fw-bold">Learn More <i class="fa fa-arrow-right-long"></i></button>
                 </div>
             </div>
             <div class="carousel-item">
@@ -53,16 +53,14 @@
                 <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
                     <h1 class="fw-bolder mb-2">Individually Tailored Driving Programs for Based on Skills</h1>
                     <hr class="custom-hr">
-                    <p class="fw-bold mb-2">Because Professional training Matters</p>
-                    <button class="btn primary-bg text-white fw-bold">Get Enrolled</button>
-                    <button class="btn primary-bg text-white fw-bold">Learn More</button>
+                    <p class="mb-2">Because Professional training Matters</p>
+                    <button class="btn primary-bg text-white fw-bold">Get Enrolled <i class="fa fa-arrow-right-long"></i></button>
+                    <button class="btn primary-border text-white fw-bold">Learn More <i class="fa fa-arrow-right-long"></i></button>
                 </div>
             </div>
         </div>
 {{--        @endif--}}
     </div>
-
-
 
 
     <!-- Main Content Area -->
@@ -85,12 +83,15 @@
                     <h1 class="fw-bolder">We’re an Experienced,
                         Trustworthy, Reliable &
                         Friendly Driving School</h1>
-                    <div class="row">
+                    <div class="row pt-md-2">
                         <div class="col-md-6">
                             <p class="fs-6 fw-bold">Offering Special weekend Classes, Book Your’s Today!</p>
                         </div>
                         <div class="col-md-6">
-                            <a href="" class="btn btn-rounded mx-auto my-2 fw-semibold btn text-dark text-wrap">Call Us</a>
+                            <button class="btn primary-border primary-col rounded-pill">
+                                <i class="fa fa-phone"></i>
+                                +012-345678
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -148,52 +149,257 @@
 {{--                    @endif--}}
 {{--                </div>--}}
 {{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+
+
+{{--    Courses Section--}}
+
+    <div class="container py-md-5 my-md-5">
+        <h1 class="fw-bolder mb-2">Popular Courses</h1>
+        <hr class="custom-hr">
+        <div class="row align-items-center">
+            <div class="col-12 col-carousel">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="card course-card primary-border">
+                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <p class="card-text">Card 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card primary-border">
+                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <p class="card-text">Card 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card primary-border">
+                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <p class="card-text">Card 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card primary-border">
+                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <p class="card-text">Card 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card primary-border">
+                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <p class="card-text">Card 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+
+                <div class="custom-controls text-center">
+                    <button class="custom-prev-btn btn primary-border"><i class="fa fa-chevron-left"></i></button>
+                    <button class="custom-next-btn btn primary-border"><i class="fa fa-chevron-right"></i></button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+
 
 
     <!-- Lower Section -->
 
-    <section>
-        <div class=" p-md-3 menu-img1 align-items-center d-flex">
-            <div class="container text-center">
-                <img src="img/lowerSection2.png" class="d-grid w-50 h-50 mx-auto">
-                <button class="btn-rounded mx-auto my-2 fw-semibold btn text-dark">
-                    BOOK A CELEBRATION
-                </button>
-            </div>
+    <section class="p-md-3 banner-2 align-items-center d-flex">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="">
+                        <h1 class="text-white">Book your lessons now</h1>
+                        <div class="py-md-3">
+                            <form action="" >
+                                <div class="mb-md-2">
+                                    <input type="name" class="form-control w-100" id="" name="first_name" placeholder="First Name">
+                                </div>
 
+                                <div class="my-md-2">
+                                    <input type="name" class="form-control w-100" id="" name="last_name" placeholder="Last Name">
+                                </div>
+
+                                <div class="my-md-2">
+                                    <input type="number" class="form-control w-100" id="" name="age" placeholder="Age">
+                                </div>
+
+                                <div class="my-md-2">
+                                    <input type="email" class="form-control w-100" id="" name="email" placeholder="Email">
+                                </div>
+
+                                <div class="my-md-2">
+                                    <input type="number" class="form-control w-100" id="" name="number" placeholder="Phone Number">
+                                </div>
+
+                                <div class="my-md-2">
+                                    <select class="form-select form-control w-100" id="">
+                                        <option value="">Select Course</option>
+                                        <option value="">Course 1</option>
+                                        <option value="">Course 2</option>
+                                        <option value="">Course 3</option>
+                                        <option value="">Course 4</option>
+                                    </select>
+                                </div>
+
+                                <div class="my-md-2">
+                                    <select class="form-select form-control w-100" id="">
+                                        <option value="">Car Type</option>
+                                        <option value="">Manual</option>
+                                        <option value="">Auto</option>
+                                    </select>
+                                </div>
+
+                                <div class="my-md-4">
+                                    <button class="btn primary-bg text-white btn-rounded w-100 fw-semibold mb-md-5">Confirm <i class="fa fa-arrow-right-long"></i></button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-5 py-md-3">
+                    <div class="container text-white">
+                        <p class="fs-6 fw-bold">Get Appointment With
+                            Qualified Instructors</p>
+                        <hr class="custom-hr">
+                        <h1 class="fw-bolder">We’re an Experienced, Trustworthy, Reliable & Friendly Driving School</h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
 
-    <section class="py-5">
-        <div class="container text-center col-green fw-bold">
-            <h1>WILDWOOD NEWSLETTER</h1>
-            <p>WE'LL KEEP YOU UPDATE WITH ALL THE LATEST NEWS & WILDWOOD PERKS!</p>
-            <div class="mx-auto">
-                <form class="row">
-                    <div class="col-md-3">
-                        <label for="newsform" class="form-label">First Name<span class="text-danger">*</span></label>
-                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">
+    <div class="container py-md-5 my-md-5">
+        <h1 class="fw-bolder mb-2">Customer Testimonials</h1>
+        <p class="fw-bolder mb-2">WHAT OUR CLIENTS ARE SAYING</p>
+        <hr class="custom-hr">
+        <div class="row align-items-center">
+            <div class="col-12 col-carousel">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="card primary-border">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="overflow-hidden mx-auto d-inline-block">
+                                        <img src="{{ asset('frontend/images/customer.jpg') }}" class="customer-img img-fluid" alt="Card Image 3">
+                                    </div>
+                                    <p class="fw-bold">Jane Doe</p>
+                                    <p class="fw-bold">USA</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam aspernatur culpa cupiditate dolorum, esse eum facere laboriosam libero maiores modi necessitatibus quaerat repellendus repudiandae rerum similique sint soluta temporibus!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <label for="newsform" class="form-label">Last Name<span class="text-danger">*</span></label>
-                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">
+                    <div class="item">
+                        <div class="card primary-border">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="overflow-hidden mx-auto d-inline-block">
+                                        <img src="{{ asset('frontend/images/customer.jpg') }}" class="customer-img img-fluid" alt="Card Image 3">
+                                    </div>
+                                    <p class="fw-bold">Jane Doe</p>
+                                    <p class="fw-bold">USA</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam aspernatur culpa cupiditate dolorum, esse eum facere laboriosam libero maiores modi necessitatibus quaerat repellendus repudiandae rerum similique sint soluta temporibus!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="newsform" class="form-label">Email address<span class="text-danger">*</span></label>
-                        <input type="email" class="form-control btn-rounded bg-white" id="newsform">
+                    <div class="item">
+                        <div class="card primary-border">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="overflow-hidden mx-auto d-inline-block">
+                                        <img src="{{ asset('frontend/images/customer.jpg') }}" class="customer-img img-fluid" alt="Card Image 3">
+                                    </div>
+                                    <p class="fw-bold">Jane Doe</p>
+                                    <p class="fw-bold">USA</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam aspernatur culpa cupiditate dolorum, esse eum facere laboriosam libero maiores modi necessitatibus quaerat repellendus repudiandae rerum similique sint soluta temporibus!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 ms-0">
-                        <button type="submit" class="btn btn-primary mt-4 btn-rounded fw-semibold">Add me</button>
+                    <div class="item">
+                        <div class="card primary-border">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="overflow-hidden mx-auto d-inline-block">
+                                        <img src="{{ asset('frontend/images/customer.jpg') }}" class="customer-img img-fluid" alt="Card Image 3">
+                                    </div>
+                                    <p class="fw-bold">Jane Doe</p>
+                                    <p class="fw-bold">USA</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam aspernatur culpa cupiditate dolorum, esse eum facere laboriosam libero maiores modi necessitatibus quaerat repellendus repudiandae rerum similique sint soluta temporibus!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
-            </div>
+                    <!-- Add more items as needed -->
+                </div>
 
+{{--                <div class="custom-controls text-center">--}}
+{{--                    <button class="custom-prev-btn btn primary-border"><i class="fa fa-chevron-left"></i></button>--}}
+{{--                    <button class="custom-next-btn btn primary-border"><i class="fa fa-chevron-right"></i></button>--}}
+{{--                </div>--}}
+            </div>
         </div>
-        </div>
-    </section>
+    </div>
+
+
+{{--    <section class="py-5">--}}
+{{--        <div class="container text-center col-green fw-bold">--}}
+{{--            <h1>WILDWOOD NEWSLETTER</h1>--}}
+{{--            <p>WE'LL KEEP YOU UPDATE WITH ALL THE LATEST NEWS & WILDWOOD PERKS!</p>--}}
+{{--            <div class="mx-auto">--}}
+{{--                <form class="row">--}}
+{{--                    <div class="col-md-3">--}}
+{{--                        <label for="newsform" class="form-label">First Name<span class="text-danger">*</span></label>--}}
+{{--                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-3">--}}
+{{--                        <label for="newsform" class="form-label">Last Name<span class="text-danger">*</span></label>--}}
+{{--                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-4">--}}
+{{--                        <label for="newsform" class="form-label">Email address<span class="text-danger">*</span></label>--}}
+{{--                        <input type="email" class="form-control btn-rounded bg-white" id="newsform">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-md-2 ms-0">--}}
+{{--                        <button type="submit" class="btn btn-primary mt-4 btn-rounded fw-semibold">Add me</button>--}}
+{{--                    </div>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+
+{{--        </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
 
 

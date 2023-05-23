@@ -13,16 +13,16 @@ body {
 }
 
 h1 {
-    letter-spacing: 5px;
+    /*letter-spacing: 5px;*/
 }
 
 textarea {
     resize: none;
 }
 
-nav {
-    height: 10vh;
-}
+/*nav {*/
+/*    height: 10vh;*/
+/*}*/
 
 footer,
 .menu-con {
@@ -56,6 +56,14 @@ a {
     color: #20F0A0;
 }
 
+.primary-border{
+    border-color : #A020F0 ;
+    border-width: 3px;
+}
+.primary-border:hover{
+    background-color : #A020F0 !important;
+    color: white !important;
+}
 
 .carousel .carousel-indicators button {
     width: 10px;
@@ -64,7 +72,7 @@ a {
     background-color: #F020E0;
 }
 
-.carousel-item::before {
+#carouselHero .carousel-item::before {
     content: "";
     position: absolute;
     top: 0;
@@ -75,7 +83,7 @@ a {
     z-index: 1;
 }
 
-.carousel-caption {
+#carouselHero .carousel-caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,16 +104,36 @@ a {
 }
 
 .nav-link:hover{
-    color: #F020E0 !important;
+    color: honeydew !important;
+    background-color: rgba(240, 32, 240, 0.4);
+    border-radius: 10px;
+}
+
+.footer-logo{
+    height: 50px;
+    width: 50px;
+}
+
+.course-card{
+    height: 50vh;
+    width: 15vw;
+}
+
+.course-card img{
+    height: 30vh;
+    width: 100%;
+}
+
+.customer-img{
+    border-radius: 50%;
 }
 
 
 
-
-
-
-
  /*media queries*/
+
+
+
 
 @media only screen and (min-width: 1376px) {
     .carousel-item {
