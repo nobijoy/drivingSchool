@@ -63,10 +63,62 @@
     </div>
 
 
+{{--    Services Cards--}}
+
+    <div class="container-sm mb-md-3">
+        <div class="row mx-auto text-center">
+            <div class="col-2"></div>
+            <div class="col-2 px-0">
+                <div class="services-card">
+                    <div class="card p-md-4">
+                        <div class="icon-rounded">
+                            <img src="{{asset('frontend/images/icon-3.png')}}" class="" alt="...">
+                        </div>
+                        <h3 class="card-text">We give Free Informational Videos & Materials</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 px-0">
+                <div class="services-card">
+                    <div class="card p-md-4 primary-bg">
+                        <div class="icon-rounded">
+                            <img src="{{asset('frontend/images/icon-4.png')}}" class="" alt="...">
+                        </div>
+                        <h3 class="card-text text-white">We give Free Informational Videos & Materials</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 px-0">
+                <div class="services-card">
+                    <div class="card p-md-4" >
+                        <div class="icon-rounded">
+                            <img src="{{asset('frontend/images/icon-5.png')}}" class="" alt="...">
+                        </div>
+                        <h3 class="card-text">We give Free Informational Videos & Materials</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 px-0">
+                <div class="services-card">
+                    <div class="card p-md-4">
+                        <div class="icon-rounded">
+                            <img src="{{asset('frontend/images/icon-6.png')}}" class="" alt="...">
+                        </div>
+                        <h3 class="card-text">We give Free Informational Videos & Materials</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+
+
+
     <!-- Main Content Area -->
 
 
-    <div class="container py-md-5 my-md-5">
+    <div class="container my-md-5 my-sm-3 my-2">
         <div class="row mb-md-3 pb-md-3">
             <div class="col-md-4 pe-md-3 pb-3 text-center">
                 {{--                    @if ($home->section_img_3)--}}
@@ -80,7 +132,7 @@
                 <div class="container ">
                     <p class="fs-6 fw-bold">LEARN TO DRIVE SAFELY</p>
                     <hr class="custom-hr">
-                    <h1 class="fw-bolder">We’re an Experienced,
+                    <h1 class="fw-bold">We’re an Experienced,
                         Trustworthy, Reliable &
                         Friendly Driving School</h1>
                     <div class="row pt-md-2">
@@ -155,53 +207,68 @@
 
 {{--    Courses Section--}}
 
-    <div class="container py-md-5 my-md-5">
+    <div class="container my-md-5 my-sm-3 my-2">
         <h1 class="fw-bolder mb-2">Popular Courses</h1>
         <hr class="custom-hr">
         <div class="row align-items-center">
             <div class="col-12 col-carousel">
                 <div class="owl-carousel">
                     <div class="item">
-                        <div class="card course-card primary-border">
-                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
+                        <div class="card course-card">
+                            <div class="card-header">
+                                <img src="{{asset('frontend/images/image-3.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            </div>
                             <div class="card-body">
                                 <h5 class="card-title">Card 3 Title</h5>
+                                <hr class="custom-hr">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quidem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card">
+                            <div class="card-header">
+                                <img src="{{asset('frontend/images/image-4.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <hr class="custom-hr">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, deserunt?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card">
+                            <div class="card-header">
+                                <img src="{{asset('frontend/images/image-5.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <hr class="custom-hr">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, voluptatum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card course-card">
+                            <div class="card-header">
+                                <img src="{{asset('frontend/images/image-6.jpg')}}" class="card-img-top" alt="Card Image 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3 Title</h5>
+                                <hr class="custom-hr">
                                 <p class="card-text">Card 3 Description</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card course-card primary-border">
-                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 3 Title</h5>
-                                <p class="card-text">Card 3 Description</p>
+                        <div class="card course-card">
+                            <div class="card-header">
+                                <img src="{{asset('frontend/images/image-7.jpg')}}" class="card-img-top" alt="Card Image 3">
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card course-card primary-border">
-                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
                             <div class="card-body">
                                 <h5 class="card-title">Card 3 Title</h5>
-                                <p class="card-text">Card 3 Description</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card course-card primary-border">
-                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 3 Title</h5>
-                                <p class="card-text">Card 3 Description</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card course-card primary-border">
-                            <img src="{{asset('frontend/images/banner-1.jpg')}}" class="card-img-top" alt="Card Image 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Card 3 Title</h5>
+                                <hr class="custom-hr">
                                 <p class="card-text">Card 3 Description</p>
                             </div>
                         </div>
@@ -290,6 +357,8 @@
     </section>
 
 
+{{--    Customer Testimonial--}}
+
     <div class="container py-md-5 my-md-5">
         <h1 class="fw-bolder mb-2">Customer Testimonials</h1>
         <p class="fw-bolder mb-2">WHAT OUR CLIENTS ARE SAYING</p>
@@ -298,7 +367,7 @@
             <div class="col-12 col-carousel">
                 <div class="owl-carousel">
                     <div class="item">
-                        <div class="card primary-border">
+                        <div class="card">
                             <div class="row align-items-center">
                                 <div class="col-md-4 text-center">
                                     <div class="overflow-hidden mx-auto d-inline-block">
@@ -314,7 +383,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card primary-border">
+                        <div class="card">
                             <div class="row align-items-center">
                                 <div class="col-md-4 text-center">
                                     <div class="overflow-hidden mx-auto d-inline-block">
@@ -330,7 +399,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card primary-border">
+                        <div class="card">
                             <div class="row align-items-center">
                                 <div class="col-md-4 text-center">
                                     <div class="overflow-hidden mx-auto d-inline-block">
@@ -346,7 +415,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="card primary-border">
+                        <div class="card">
                             <div class="row align-items-center">
                                 <div class="col-md-4 text-center">
                                     <div class="overflow-hidden mx-auto d-inline-block">
@@ -372,34 +441,37 @@
         </div>
     </div>
 
+    <!-- Driving info section -->
 
-{{--    <section class="py-5">--}}
-{{--        <div class="container text-center col-green fw-bold">--}}
-{{--            <h1>WILDWOOD NEWSLETTER</h1>--}}
-{{--            <p>WE'LL KEEP YOU UPDATE WITH ALL THE LATEST NEWS & WILDWOOD PERKS!</p>--}}
-{{--            <div class="mx-auto">--}}
-{{--                <form class="row">--}}
-{{--                    <div class="col-md-3">--}}
-{{--                        <label for="newsform" class="form-label">First Name<span class="text-danger">*</span></label>--}}
-{{--                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-3">--}}
-{{--                        <label for="newsform" class="form-label">Last Name<span class="text-danger">*</span></label>--}}
-{{--                        <input type="name" class="form-control btn-rounded bg-white" id="newsform">--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-4">--}}
-{{--                        <label for="newsform" class="form-label">Email address<span class="text-danger">*</span></label>--}}
-{{--                        <input type="email" class="form-control btn-rounded bg-white" id="newsform">--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-2 ms-0">--}}
-{{--                        <button type="submit" class="btn btn-primary mt-4 btn-rounded fw-semibold">Add me</button>--}}
-{{--                    </div>--}}
-{{--                </form>--}}
-{{--            </div>--}}
+    <div class="container py-md-5 my-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{asset('/frontend/images/image-77.jpg')}}" class="d-grid w-100 h-100">
+            </div>
+            <div class="col-md-6 ps-md-5">
+                <p>COUNTLESS BENEFITS OF DRIVEGA</p>
+                <hr class="custom-hr">
+                <h2>Modern Technologies For Much Easier Driving</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{asset('/frontend/images/icon-7.png')}}" class="d-grid w-50 h-50">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Learn from Experienced Teachers</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{asset('/frontend/images/icon-8.png')}}" class="d-grid w-50 h-50">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Covering All Aspects of Safe Driving</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-{{--        </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
 
 
 

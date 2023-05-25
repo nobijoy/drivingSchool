@@ -2,15 +2,15 @@
 <footer class="py-md-3 primary-bg text-white">
     <div class="container my-3 p-4 ">
         <div class="col-sm-12 col-green">
-            <div class="row text-center">
+            <div class="row">
                 <div class="col-sm-3 py-3">
                     <a class="py-md-2" href="">
                         <div class="row">
-                            <div class="col-4 pe-0">
+                            <div class="col-2 ms-2 pe-0">
                                 <img src="{{ asset('frontend/images/logo.jpg') }}" alt="" class="footer-logo img-fluid">
                             </div>
-                            <div class="col-8 ps-0">
-                                <h3 class="text-left text-white">DrivingSchool</h3>
+                            <div class="col-9">
+                                <h3 class="text-left text-white footer-link">DrivingSchool</h3>
                             </div>
                         </div>
                     </a>
@@ -43,16 +43,16 @@
                     <hr class="custom-hr">
                     <ul class="list-group">
                         <li>
-                            <a href="#" class="text-white">Learn To Drive Slowly</a>
+                            <a href="#" class="text-white footer-link">Learn To Drive Slowly</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Automatic Car Lessons</a>
+                            <a href="#" class="text-white footer-link">Automatic Car Lessons</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Highway Driving Course</a>
+                            <a href="#" class="text-white footer-link">Highway Driving Course</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">For International Drivers</a>
+                            <a href="#" class="text-white footer-link">For International Drivers</a>
                         </li>
                     </ul>
                 </div>
@@ -61,38 +61,38 @@
                     <hr class="custom-hr">
                     <ul class="list-group">
                         <li>
-                            <a href="#" class="text-white">Feedback</a>
+                            <a href="#" class="text-white footer-link">Feedback</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Cancel Booking</a>
+                            <a href="#" class="text-white footer-link">Cancel Booking</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Help & Advice</a>
+                            <a href="#" class="text-white footer-link">Help & Advice</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Contact</a>
+                            <a href="#" class="text-white footer-link">Contact</a>
                         </li>
                         <li>
-                            <a href="#" class="text-white">Frequently Asked Question</a>
+                            <a href="#" class="text-white footer-link">Frequently Asked Question</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="icons p-4 text-center fs-3">
+        <div class="icons p-4 fs-3">
             <h2>Follow us on:</h2>
             <hr class="custom-hr">
             <a href="#" class="">
-                <span><i class="fab fa-facebook text-white mx-3"></i></span>
+                <span><i class="fab fa-facebook text-white mx-3 footer-link"></i></span>
             </a>
             <a href="#">
-                <span><i class="fab fa-whatsapp text-white mx-3"></i></span>
+                <span><i class="fab fa-whatsapp text-white mx-3 footer-link"></i></span>
             </a>
             <a href="#">
-                <span><i class="fab fa-instagram text-white mx-3"></i></span>
+                <span><i class="fab fa-instagram text-white mx-3 footer-link"></i></span>
             </a>
             <a href="#">
-                <span><i class="fab fa-twitter text-white mx-3"></i></span>
+                <span><i class="fab fa-twitter text-white mx-3 footer-link"></i></span>
 
             </a>
         </div>

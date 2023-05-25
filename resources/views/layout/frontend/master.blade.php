@@ -9,16 +9,15 @@
     <title> @yield('title')</title>
     {{--    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/uploads/image/'.$gsetting->favicon)}}">--}}
     <link rel="stylesheet" href="{{asset('/frontend/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('/frontend/css/app.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('/frontend/css/app.css')}}">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
           integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{asset('/frontend/css/styles.css?v1.0.6')}}">
+    <link rel="stylesheet" href="{{asset('/frontend/css/styles.css?v1.0.7')}}">
     <style>
         .banner-2 {
             background-image: url("{{ asset('/frontend/images/car-banner.svg') }}");
-            /*background-image: url(/img/lowerSection1.jpg) ;*/
             background-repeat: no-repeat;
             background-size: cover;
             height: 80vh;
@@ -33,153 +32,74 @@
             z-index: 1000;
         }
 
-        section {
-            width: 100%;
-            height: 100vh;
-        }
-
-        section.sec1 {
-            background: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-            background-size: cover;
-        }
-
-        section.sec2 {
-            padding: 100px;
-            box-sizing: border-box;
-            height: auto;
-        }
-
-        section.sec2 h2 {
-            font-size: 3em;
-            margin: 0;
-            padding: 0 0 20px;
-            color: #fff;
-        }
-
-        section.sec2 p {
-            font-size: 1.2em;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-        }
-
-        section.sec3 {
-            background: url("https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-            background-size: cover;
-        }
 
         nav {
             width: 100%;
-            height: 50px;
-            background: rgba(0,0,0, .8);
-            border-top: 1px solid rgba(255,255,255, .2);
-            border-bottom: 1px solid rgba(255,255,255, .2);
-            position: sticky;
+            /*!*height: 50px;*!*/
+            /*background: rgba(0,0,0, .8);*/
+            /*border-top: 1px solid rgba(255,255,255, .2);*/
+            /*border-bottom: 1px solid rgba(255,255,255, .2);*/
+            position: sticky !important;
             top: 0;
             z-index: 1000;
         }
 
-        nav ul {
-            display: flex;
-            margin: 0;
-            padding: 0 100px;
-            justify-content: flex-end;
-        }
-
-        nav ul li {
-            list-style: none;
-        }
-
-        nav ul li a {
-            display: block;
-            color: #fff;
-            padding: 0 10px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            line-height: 50px; /**  Rarely used! **/
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: #f00;
-
-        }
 
     </style>
 </head>
 
 <body >
 
-
-
-{{--<div class="fixed-top">--}}
-{{--    <div class="topbar bg-dark text-white">--}}
-{{--        <div class="container-fluid px-md-5 mx-md-5 py-0 ">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-4">--}}
-{{--                    <span class="topbar-item"><i class="fas fa-phone"></i> +1234567890</span>--}}
-{{--                    <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> 123 Street, City</span>--}}
-{{--                    <span class="topbar-item"><i class="fas fa-envelope"></i> example@mail.com</span>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-8 text-right">--}}
-{{--                    <!-- Add any additional content or social media links here -->--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--    <nav class="navbar navbar-expand-lg navbar-light bg-light">--}}
-{{--        <div class="container-fluid px-md-5 py-0 ">--}}
-{{--            <div class="row" id="navRow">--}}
-{{--                <a class="navbar-brand py-0" href="">--}}
-{{--                    <img src="{{ asset('frontend/images/logo.jpg') }}" alt="" class="front-logo ">--}}
-{{--                </a>--}}
-{{--                <button class="navbar-toggler btn-rounded bg-white text-white m-0" type="button" data-bs-toggle="collapse"--}}
-{{--                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"--}}
-{{--                        aria-label="Toggle navigation">--}}
-{{--                    <span class="navbar-toggler-icon"><i class="fa fa-bars nav-link round-border"></i></span>--}}
-{{--                </button>--}}
-
-{{--                <div class="collapse navbar-collapse" id="navbarNav">--}}
-{{--                    <div class="mx-auto"></div>--}}
-{{--                    <ul class="navbar-nav fw-semibold">--}}
-{{--                        <li class="nav-item px-3">--}}
-{{--                            <a class="nav-link fs-5 text-white" href="">Home</a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item px-3">--}}
-{{--                            <a class="nav-link fs-5 text-white" href="">Courses</a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item px-3">--}}
-{{--                            <a class="nav-link fs-5 text-white" href="">About Us</a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item px-3">--}}
-{{--                            <a class="nav-link fs-5 text-white" href="">Contact</a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </nav>--}}
-{{--</div>--}}
-
-<header>
-    <img src="./index_files/2824095.jpg" style="width: 50px">
-</header>
-<nav>
-    <div>
-        <a class="navbar-brand py-0" href="">
-            <img src="{{ asset('frontend/images/logo.jpg') }}" alt="" class="front-logo" height="">
-        </a>
+<header class="bg-dark text-white">
+    <div class="container-fluid mx-md-5 px-md-5 ">
+        <div class="row">
+            <div class="col-md-9">
+                <span class="topbar-item"><i class="fas fa-phone"></i> +1234567890</span>
+                <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> 123 Street, City</span>
+                <span class="topbar-item"><i class="fas fa-envelope"></i> example@mail.com</span>
+            </div>
+            <div class="col-md-3 text-right">
+                <!-- Add any additional content or social media links here -->
+            </div>
+        </div>
     </div>
-    <ul>
-        <li><a href="index.html#" class="active">Home</a></li>
-        <li><a href="index.html#">About</a></li>
-        <li><a href="index.html#">Services</a></li>
-        <li><a href="index.html#">Portfolio</a></li>
-        <li><a href="index.html#">Team</a></li>
-        <li><a href="index.html#">Contact</a></li>
-    </ul>
+</header>
+<nav class="navbar navbar-expand-sm primary-bg py-0 shadow">
+    <div class="container-fluid d-block mx-lg-5 px-lg-5 mx-sm-2 px-md-2 px-sx-0">
+        <div class="row">
+            <div class="col-5">
+                <a class="navbar-brand py-0" href="{{route('home')}}">
+                    <div class="front-logo-container">
+                        <img src="{{ asset('frontend/images/logo.jpg') }}" alt="" class="front-logo">
+                    </div>
+                </a>
+            </div>
+            <div class="col-7 d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler btn-rounded text-white m-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class=""><i class="fa fa-bars nav-link round-border"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav fw-bold">
+                        <li class="nav-item px-md-3">
+                            <a class="nav-link text-white" href="{{route('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item px-md-3">
+                            <a class="nav-link text-white" href="{{route('courses')}}">Courses</a>
+                        </li>
+                        <li class="nav-item px-md-3">
+                            <a class="nav-link text-white" href="{{route('about')}}">About Us</a>
+                        </li>
+                        <li class="nav-item px-md-3">
+                            <a class="nav-link text-white" href="{{route('contact')}}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
 
 
@@ -204,23 +124,7 @@
 <script src="{{asset('/frontend/js/custom.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-    var nav = document.querySelector('nav');
 
-
-
-    window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 1) {
-            // nav.classList.remove('py-md-4');
-            nav.classList.add('primary-bg', 'shadow');
-            $('.fixed-top').addClass('primary-bg');
-
-        } else {
-            // nav.classList.add('py-md-4');
-            nav.classList.remove('primary-bg', 'shadow' );
-            $('.fixed-top').removeClass('primary-bg');
-
-        }
-    });
 
     let items = document.querySelectorAll('.carousel .carousel-item')
 
