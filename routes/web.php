@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Backend\CategoryController;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +39,21 @@ Route::get('/contact', function () {
     return view('frontend.contact');
 })->name('contact');
 
+
+Auth::routes();
+
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
+
+    Route::delete('category/delete/{id}', [CategoryController::class,'delete'])->name('category.delete');
+    Route::resource('category', CategoryController::class)->parameters(['category' => 'id']);
+    Route::post('category/update/{id}', [CategoryController::class,'update'])->name('category.update');
+
+    Route::delete('course/delete/{id}', [CategoryController::class,'delete'])->name('course.delete');
+    Route::resource('course', CategoryController::class)->parameters(['course' => 'id']);
+    Route::post('course/update/{id}', [CategoryController::class,'update'])->name('course.update');
+
+
+});
