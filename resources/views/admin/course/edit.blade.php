@@ -16,12 +16,9 @@
             <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
                 <div class="breadcrumb-wrapper col-12">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Manage Category</a>
-                        </li>
-                        <li class="breadcrumb-item active"><a href="#">Edit Category</a>
-                        </li>
+                        <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Manage Course</a></li>
+                        <li class="breadcrumb-item active"><a href="#">Edit Course</a></li>
                     </ol>
                 </div>
             </div>

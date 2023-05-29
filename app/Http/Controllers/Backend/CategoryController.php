@@ -67,7 +67,7 @@ class CategoryController extends Controller
 
         } catch (\Throwable $th) {
             DB::rollback();
-            return back()->with('error', 'Somethings went wrong. Try Again');
+            return back()->with('error', 'Something went wrong. Try Again');
         }
     }
 
@@ -141,7 +141,7 @@ class CategoryController extends Controller
 
         } catch (\Throwable $th) {
             DB::rollback();
-            return back()->with('error', 'Somethings went wrong. Try Again');
+            return back()->with('error', 'Something went wrong. Try Again');
         }
     }
 

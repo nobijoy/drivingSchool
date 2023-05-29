@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Backend\CategoryController;
-
-
+use App\Http\Controllers\Backend\CourseController;
+use App\Http\Controllers\Backend\SettingController;
 
 
 
@@ -46,14 +46,22 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/profileUpdate/{id}', [HomeController::class, 'profileUpdate'])->name('profileUpdate');
+    Route::get('/changePassword/{id}', [HomeController::class, 'changePassword'])->name('changePassword');
+
+    Route::match(['get', 'post'], 'setting', [SettingController::class, 'setting'])->name('setting');
+    Route::post('emailSetup', [SettingController::class, 'emailSetup'])->name('emailSetup');
+    Route::post('copyright', [SettingController::class, 'copyright'])->name('copyright');
+//    Route::match(['get', 'post'], 'mailSetup', [SettingController::class, 'emailSetup'])->name('emailSetup');
+//    Route::match(['get', 'post'], 'copyright', [SettingController::class, 'copyright'])->name('copyright');
 
     Route::delete('category/delete/{id}', [CategoryController::class,'delete'])->name('category.delete');
     Route::resource('category', CategoryController::class)->parameters(['category' => 'id']);
     Route::post('category/update/{id}', [CategoryController::class,'update'])->name('category.update');
 
-    Route::delete('course/delete/{id}', [CategoryController::class,'delete'])->name('course.delete');
-    Route::resource('course', CategoryController::class)->parameters(['course' => 'id']);
-    Route::post('course/update/{id}', [CategoryController::class,'update'])->name('course.update');
+    Route::delete('course/delete/{id}', [CourseController::class,'delete'])->name('course.delete');
+    Route::resource('course', CourseController::class)->parameters(['course' => 'id']);
+    Route::post('course/update/{id}', [CourseController::class,'update'])->name('course.update');
 
 
 });

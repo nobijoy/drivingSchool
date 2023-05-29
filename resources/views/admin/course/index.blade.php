@@ -1,19 +1,19 @@
 @extends('layouts.backend.master')
-@section('title', 'Category')
+@section('title', 'Course')
 @section('body')
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-1">
                 <h3 class="content-header-title">
-                    <a href="{{ route ('category.create')}}" class="btn btn-primary"> Add Category <i class="fa fa-plus"></i></a>
+                    <a href="{{ route ('course.create')}}" class="btn btn-primary"> Add Course <i class="fa fa-plus"></i></a>
                 </h3>
             </div>
             <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
                 <div class="breadcrumb-wrapper col-12">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Manage Category</a></li>
-                        <li class="breadcrumb-item active"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item"><a href="#">Manage Course</a></li>
+                        <li class="breadcrumb-item active"><a href="#">Course</a></li>
                     </ol>
                 </div>
             </div>
@@ -52,8 +52,14 @@
                                             <thead>
                                                 <tr>
                                                     <th>Sl</th>
-                                                    <th>Name</th>
-                                                    <th>Description</th>
+                                                    <th>Title</th>
+                                                    <th>Category</th>
+                                                    <th>Duration</th>
+                                                    <th>Fee</th>
+                                                    <th>Min. Deposit</th>
+                                                    <th>Transmission</th>
+                                                    <th>Video Link</th>
+                                                    <th>Featured</th>
                                                     <th>Image</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -63,8 +69,14 @@
                                                     @foreach ($datas as $data)
                                                         <tr>
                                                             <td>{{++$sl}}</td>
-                                                            <td>{{$data->name}}</td>
-                                                            <td>{{$data->desc}}</td>
+                                                            <td>{{$data->title}}</td>
+                                                            <td>{{$data->categoryInfo->name}}</td>
+                                                            <td>{{$data->duration}} Days</td>
+                                                            <td>{{$data->fee}}</td>
+                                                            <td>{{$data->min_deposit}}</td>
+                                                            <td>{{$data->transmission_type}}</td>
+                                                            <td>{{$data->video}}</td>
+                                                            <td>{{$data->is_featured}}</td>
                                                             <td>
                                                                 <a href="{{ $data->image ? asset ('/uploads/image/'.$data->image) : '#' }}" target="_blank"
                                                                     rel="noopener noreferrer">
@@ -73,12 +85,12 @@
                                                                 </a>
                                                             </td>
                                                             <td>
-                                                                <a href="{{ route ('category.edit', $data->id)}}">
+                                                                <a href="{{ route ('course.edit', $data->id)}}">
                                                                     <button type="button" title="Edit" class="btn btn-icon btn-outline-primary btn-sm">
                                                                         <i class="fa fa-pencil-square"></i></button>
                                                                 </a>
                                                                 <button type="button" class="btn btn-icon btn-outline-danger btn-sm" title="Inactive"
-                                                                        onclick="deleteData('{{ route('category.delete', $data->id) }}')">
+                                                                        onclick="deleteData('{{ route('course.delete', $data->id) }}')">
                                                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                                                 </button>
                                                             </td>

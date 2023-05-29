@@ -23,7 +23,7 @@
                             href="#"><i class="feather icon-menu"></i></a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav float-right">
+                <ul class="nav navbar-nav mr-md-2 float-right">
 {{--                    <li class="nav-link">--}}
 {{--                        <a href="" target="_blank" class="btn btn-primary">Website</a>--}}
 {{--                    </li>--}}
@@ -36,10 +36,10 @@
                             <span class="user-name">{{Auth()->user()->first_name}}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-{{--                            <a class="dropdown-item" href="{{route('profileUpdate', [Auth()->user()->name])}}"><i class="feather icon-user"></i> Edit Profile</a>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
-{{--                            <a class="dropdown-item" href="{{route('changePassword', [Auth()->user()->name])}}"><i class="feather icon-edit"></i> Change Password</a>--}}
-{{--                            <div class="dropdown-divider"></div>--}}
+                            <a class="dropdown-item" href="{{route('profileUpdate', [Auth()->user()->id])}}"><i class="feather icon-user"></i> Edit Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{route('changePassword', [Auth()->user()->id])}}"><i class="feather icon-edit"></i> Change Password</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

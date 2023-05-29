@@ -10,18 +10,15 @@
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-1">
                 <h3 class="content-header-title">
-                    <a href="{{ route('category.index') }}" class="btn btn-primary">Course List<i class="fa fa-eye"></i></a>
+                    <a href="{{ route('course.index') }}" class="btn btn-primary">Course List<i class="fa fa-eye"></i></a>
                 </h3>
             </div>
             <div class="content-header-right breadcrumbs-right breadcrumbs-top col-md-6 col-12">
                 <div class="breadcrumb-wrapper col-12">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="">Home</a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Manage Category</a>
-                        </li>
-                        <li class="breadcrumb-item active"><a href="#">Add Course</a>
-                        </li>
+                        <li class="breadcrumb-item"><a href="{{ route ('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Manage Course</a></li>
+                        <li class="breadcrumb-item active"><a href="#">Add Course</a></li>
                     </ol>
                 </div>
             </div>
@@ -86,6 +83,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>

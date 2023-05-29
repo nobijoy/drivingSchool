@@ -18,7 +18,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">Home</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">Manage Category</a>
+                        <li class="breadcrumb-item"><a href="#">Manage Course</a>
                         </li>
                         <li class="breadcrumb-item active"><a href="#">Add Category</a>
                         </li>

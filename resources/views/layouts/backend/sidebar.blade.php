@@ -8,17 +8,12 @@
                 </a>
             </li>
 
-            <li class=" nav-item">
-                <a href="">
+            <li @if($url == 'setting') class="active" @else class="nav-item" @endif>
+                <a  href="{{route('setting')}}">
                     <i class="feather icon-settings"></i><span class="menu-title">General Setting</span>
                 </a>
-                <ul class="menu-content">
-
-{{--                    <li @if($url == 'outlet_setting') class="active"  @endif>--}}
-{{--                        <a href="{{route('outlet_setting')}}">Outlet Setting</a>--}}
-{{--                    </li>--}}
-                </ul>
             </li>
+
             <li class=" nav-item">
                 <a href="">
                     <i class="feather icon-list"></i><span class="menu-title">Manage Course</span>
