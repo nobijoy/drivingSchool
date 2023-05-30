@@ -20,9 +20,9 @@
                 </a>
                 <ul class="menu-content">
 
-                    <li @if($url == 'category.index') class="active"  @endif>
-                        <a href="{{route('category.index')}}">Course Category</a>
-                    </li>
+{{--                    <li @if($url == 'category.index') class="active"  @endif>--}}
+{{--                        <a href="{{route('category.index')}}">Course Category</a>--}}
+{{--                    </li>--}}
                     <li @if($url == 'course.index') class="active"  @endif>
                         <a href="{{route('course.index')}}">Courses</a>
                     </li>

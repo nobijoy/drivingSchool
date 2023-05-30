@@ -29,8 +29,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $categories = Category::where('is_active',1)->get();
-        return view('admin.course.create', compact('categories'));
+        return view('admin.course.create');
     }
 
     /**
@@ -52,7 +51,6 @@ class CourseController extends Controller
 
             $data = new Course;
             $data->title = $request->title;
-            $data->category = $request->category;
             $data->video = $request->video;
             $data->short_desc = $request->short_desc;
             $data->desc = $request->desc;
@@ -103,9 +101,8 @@ class CourseController extends Controller
     public function edit($id)
     {
         $data = Course::findOrFail($id);
-        $categories = Category::where('is_active',1)->get();
 
-        return view('admin.course.edit', compact('data', 'categories'));
+        return view('admin.course.edit', compact('data'));
     }
 
     /**
@@ -127,7 +124,6 @@ class CourseController extends Controller
         try {
             $data = Course::findOrFail($id);
             $data->title = $request->title;
-            $data->category = $request->category;
             $data->video = $request->video;
             $data->short_desc = $request->short_desc;
             $data->desc = $request->desc;

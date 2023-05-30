@@ -16,7 +16,6 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
-            $table->UnsignedBigInteger('category')->Unsigned()->nullable();
             $table->string('image')->nullable();
             $table->string('video')->nullable();
             $table->text('short_desc')->nullable();
@@ -26,12 +25,12 @@ class CreateCoursesTable extends Migration
             $table->double('min_deposit')->nullable();
             $table->string('transmission_type')->nullable();
             $table->string('utility')->nullable();
+            $table->string('domain')->nullable();
             $table->tinyInteger('is_featured')->default(1);
             $table->tinyInteger('is_active')->default(1);
             $table->UnsignedBigInteger('created_by')->Unsigned()->nullable();
             $table->UnsignedBigInteger('updated_by')->Unsigned()->nullable();
             $table->UnsignedBigInteger('deleted_by')->Unsigned()->nullable();
-            $table->foreign('category')->references('id')->on('categories')->onDelete('restrict');
             $table->foreign('created_by')->references('id')->on('users')->onDelete('restrict');
             $table->foreign('updated_by')->references('id')->on('users')->onDelete('restrict');
             $table->foreign('deleted_by')->references('id')->on('users')->onDelete('restrict');

@@ -74,8 +74,8 @@ class SettingController extends Controller
                 return back()->with('error', $th->getMessage());
             }
         }
-        $datas = Setting::all(); // Retrieve all inputs from the database
-dd($datas);
+        $datas = []; // Retrieve all inputs from the database
+//dd($datas);
 //        return View::make('form')->with('inputs', $inputs);
         return view('admin.settings.settings', compact('datas'));
     }

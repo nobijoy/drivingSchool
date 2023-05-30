@@ -6,17 +6,6 @@
                @if($url == 'course.edit') value="{{$data->title}}" @else value="{{old('title')}}" @endif required>
     </div>
 
-
-    <div class="form-group col-md-6 ">
-        <label for="category">Select Category <span class="text-danger">*</span></label>
-        <select name="category" id="category" class="form-control select2" required>
-            <option value="">Select</option>
-            @foreach ($categories as $type)
-                <option value="{{$type->id}}" @if(($url == 'course.edit') && $data->category == $type->id) selected @endif>{{$type->name}}</option>
-            @endforeach
-        </select>
-    </div>
-
     <div class="form-group col-md-6 ">
         <label for="duration">Course Duration (Days) <span class="text-danger">*</span></label>
         <input type="text" id="duration" class="form-control phone" placeholder="Ex: 30" name="duration"

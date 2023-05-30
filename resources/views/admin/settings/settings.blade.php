@@ -70,39 +70,44 @@
                                             <form class="form" method="post" action="{{ route('setting') }}" enctype="multipart/form-data">@csrf
                                                 <div class="form-body">
                                                     <div class="row">
+                                                        @php($name = \App\Models\Setting::where('key', 'name')->first()->value)
 
                                                         <div class="form-group col-md-12 ">
                                                             <label for="name">Company Name <span class="text-danger">*</span></label>
                                                             <input type="text" id="name" class="form-control" placeholder="Add Name here" name="name"
-                                                                   value="" value="{{ isset($datas['name']) ? $datas['name'] : old('name') }}" required>
+                                                                   value="{{ $name ?? old('name') }}" required>
                                                         </div>
 
+                                                        @php($email = \App\Models\Setting::where('key', 'email')->first()->value)
                                                         <div class="form-group col-md-12 ">
                                                             <label for="email">Email <span class="text-danger">*</span></label>
                                                             <input type="email" id="email" class="form-control" placeholder="Add email here" name="email"
-                                                                   value="" value="{{old('email')}}" required>
+                                                                   value="{{$email ?? old('email')}}" required>
                                                         </div>
 
+                                                        @php($phone = \App\Models\Setting::where('key', 'phone')->first()->value)
                                                         <div class="form-group col-md-12 ">
                                                             <label for="phone">Phone <span class="text-danger">*</span></label>
                                                             <input type="text" id="phone" class="form-control" placeholder="Add phone here" name="phone"
-                                                                   value="" value="{{old('phone')}}" required>
+                                                                   value="{{$phone ?? old('phone')}}" required>
                                                         </div>
 
-                                                            <div class="form-group col-md-12 mb-2 mx-auto">
-                                                                <img src="" alt="users avatar" width="30px" height="30px"
-                                                                     class="">
-                                                            </div>
+                                                        @php($favicon = \App\Models\Setting::where('key', 'favicon')->first()->value)
+                                                        <div class="form-group col-md-12 mb-2 mx-auto">
+                                                            <img src="{{ asset ('/uploads/image/'.$favicon)}}" alt="users avatar" width="30px" height="30px"
+                                                                 class="">
+                                                        </div>
 
                                                        <div class="form-group col-md-12 ">
                                                             <label for="favicon">Change Favicon (Preferred size 30 X 30 )</label>
                                                             <input type="file" name="favicon" id="favicon" class="form-control">
                                                         </div>
 
-                                                            <div class="form-group col-md-12 mb-2 mx-auto">
-                                                                <img src="" alt="users avatar" width="120px" height="120px"
-                                                                     class="">
-                                                            </div>
+                                                        @php($logo = \App\Models\Setting::where('key', 'logo')->first()->value)
+                                                        <div class="form-group col-md-12 mb-2 mx-auto">
+                                                            <img src="{{ asset ('/uploads/image/'.$logo)}}" alt="users avatar" width="120px" height="120px"
+                                                                 class="">
+                                                        </div>
 
                                                         <div class="form-group col-md-12 ">
                                                             <label for="logo">Change Logo (Preferred size 120 X 120 )</label>
@@ -227,7 +232,26 @@
         </div>
     </div>
 
+@endsection
 
-
-
+@section('script')
+    <script>
+        $(document).ready(function() {
+            // Add event listener for tab changes
+            $('a[data-toggle="pill"]').on('shown.bs.tab', function(e) {
+                var targetTabId = $(e.target).attr("href"); // Get the ID of the newly shown tab
+                // Perform actions based on the tab ID
+                if (targetTabId === "#pillEle1") {
+                    console.log("Settings tab was shown");
+                    // Add your custom logic for the Settings tab
+                } else if (targetTabId === "#pillEle2") {
+                    console.log("Mail Settings tab was shown");
+                    // Add your custom logic for the Mail Settings tab
+                } else if (targetTabId === "#pillEle3") {
+                    console.log("Copyright Settings tab was shown");
+                    // Add your custom logic for the Copyright Settings tab
+                }
+            });
+        });
+    </script>
 @endsection
