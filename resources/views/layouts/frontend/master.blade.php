@@ -108,7 +108,7 @@
 
 
 
-@extends('layout.frontend.header')
+@extends('layouts.frontend.header')
 
 <!-- Banner Image  -->
 @yield('body')
@@ -116,7 +116,7 @@
 <!-- Footer -->
 
 
-@extends('layout.frontend.footer')
+@extends('layouts.frontend.footer')
 
 <script src="{{asset('/frontend/js/jquery-3.6.1.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.35/sweetalert2.all.min.js"></script>

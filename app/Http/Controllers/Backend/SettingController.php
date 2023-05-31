@@ -20,7 +20,7 @@ class SettingController extends Controller
             DB::beginTransaction();
             try{
 
-                $inputData = $request->except(['_token', 'logo', 'favicon']);
+                $inputData = $request->except(['_token', 'company_logo', 'company_favicon']);
 
                 foreach ($inputData as $fieldName => $fieldValue) {
                     $input = Setting::where('key', $fieldName)->first();
@@ -35,31 +35,31 @@ class SettingController extends Controller
                     }
                 }
 
-                if($request->file('logo')){
-                    $image = $request->file('logo');
-                    $input = time() . 'logo.' . $image->getClientOriginalExtension();
+                if($request->file('company_logo')){
+                    $image = $request->file('company_logo');
+                    $input = time() . 'company_logo.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('uploads/image');
                     $img = Image::make($image->getRealPath());
                     $img->orientate();
                     $img->resize(120, 120)->save($destinationPath.'/'.$input);
                     $destinationPath = public_path('/thumbnail');
                     $image->move($destinationPath,$input);
-                    Setting::updateOrCreate(['key' => 'logo'], ['value' => $input]);
+                    Setting::updateOrCreate(['key' => 'company_logo'], ['value' => $input]);
                     $tmpImg = public_path('thumbnail/'.$input);
                     if (file_exists($tmpImg)) {
                         unlink($tmpImg);
                     }
                 }
-                if($request->file('favicon')){
-                    $image = $request->file('favicon');
-                    $input = time() . 'favicon.' . $image->getClientOriginalExtension();
+                if($request->file('company_favicon')){
+                    $image = $request->file('company_favicon');
+                    $input = time() . 'company_favicon.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('uploads/image');
                     $img = Image::make($image->getRealPath());
                     $img->orientate();
                     $img->resize(30, 30)->save($destinationPath.'/'.$input);
                     $destinationPath = public_path('/thumbnail');
                     $image->move($destinationPath,$input);
-                    Setting::updateOrCreate(['key' => 'favicon'], ['value' => $input]);
+                    Setting::updateOrCreate(['key' => 'company_favicon'], ['value' => $input]);
                     $tmpImg = public_path('thumbnail/'.$input);
                     if (file_exists($tmpImg)) {
                         unlink($tmpImg);
@@ -74,18 +74,20 @@ class SettingController extends Controller
                 return back()->with('error', $th->getMessage());
             }
         }
-        $datas = []; // Retrieve all inputs from the database
 //dd($datas);
 //        return View::make('form')->with('inputs', $inputs);
-        return view('admin.settings.settings', compact('datas'));
+        return view('admin.settings.settings');
     }
 
     public function emailSetup(Request $request){
 
+        if($request->isMethod('post')){
+            dd($request->all());
+
+        }
+
+        return view('admin.settings.mailSetup');
     }
 
-    public function copyright(Request $request){
-
-    }
 
 }
