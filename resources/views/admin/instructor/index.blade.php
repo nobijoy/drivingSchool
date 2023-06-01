@@ -59,11 +59,42 @@
                                                     <th>Experience (Years)</th>
                                                     <th>Certifications</th>
                                                     <th>Bio</th>
+                                                    <th>Image</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-
+                                            @if (sizeof ($datas) > 0)
+                                                @foreach ($datas as $data)
+                                                    <tr>
+                                                        <td>{{++$sl}}</td>
+                                                        <td>{{$data->name}}</td>
+                                                        <td>{{$data->email}}</td>
+                                                        <td>{{$data->phone}} Days</td>
+                                                        <td>{{$data->specialization}}</td>
+                                                        <td>{{$data->experience}}</td>
+                                                        <td>{{$data->certifications}}</td>
+                                                        <td>{{$data->bio}}</td>
+                                                        <td>
+                                                            <a href="{{ $data->image ? asset ('/uploads/image/'.$data->image) : '#' }}" target="_blank"
+                                                               rel="noopener noreferrer">
+                                                                <img src="{{ $data->image ? asset ('/uploads/image/'.$data->image) : '#' }}"
+                                                                     width="70px" height="40px" alt="">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{ route ('instructor.edit', $data->id)}}">
+                                                                <button type="button" title="Edit" class="btn btn-icon btn-outline-primary btn-sm">
+                                                                    <i class="fa fa-pencil-square"></i></button>
+                                                            </a>
+                                                            <button type="button" class="btn btn-icon btn-outline-danger btn-sm" title="Inactive"
+                                                                    onclick="deleteData('{{ route('instructor.delete', $data->id) }}')">
+                                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
                                             </tbody>
                                             <tfoot class="display-hidden">
                                             </tfoot>

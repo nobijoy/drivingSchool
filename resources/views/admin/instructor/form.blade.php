@@ -42,4 +42,19 @@
                   placeholder="Enter instructor bio...">@if($url == 'instructor.edit'){{$data->bio}}@else{{old('bio')}}@endif</textarea>
     </div>
 
+    <div class="row">
+        @if($url == 'instructor.edit')
+            <div class="form-group col-md-12 mb-2 mx-auto">
+                <img src="{{ asset ('/uploads/image/'.$data->image)}}" alt="users avatar" width="120px" height="120px"
+                     class="">
+            </div>
+        @endif
+
+        <div class="form-group col-md-12 ">
+            <label for="image">@if($url == 'instructor.edit') Change Image @else Image @endif</label>
+            <input type="file" name="image" id="image" class="form-control">
+        </div>
+    </div>
+
+
 </div>

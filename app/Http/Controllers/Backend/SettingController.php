@@ -80,13 +80,18 @@ class SettingController extends Controller
     }
 
     public function emailSetup(Request $request){
-
+        $emailSetup = Setting::where('key', 'mail_setup')->first();
         if($request->isMethod('post')){
-            dd($request->all());
-
+            $data = $request->except('_token');
+            $emailSetup = new Setting;
+            $emailSetup->key = 'mail_setup';
+            $emailSetup->value = json_encode($data);
+            $emailSetup->save();
+            $emailSetup = Setting::where('key', 'mail_setup')->first();
+            return back()->with('success', 'Data updated successfully!');
         }
 
-        return view('admin.settings.mailSetup');
+        return view('admin.settings.mailSetup', compact('emailSetup'));
     }
 
 

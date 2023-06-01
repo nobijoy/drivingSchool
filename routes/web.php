@@ -8,6 +8,9 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\EnrollController;
 use App\Http\Controllers\Backend\InstructorController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\ShowPageController;
+use App\Http\Controllers\Backend\CoverAreaController;
+
 
 
 
@@ -68,13 +71,20 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('enroll', EnrollController::class)->parameters(['enroll' => 'id']);
 //    Route::post('enroll/update/{id}', [CourseController::class,'update'])->name('enroll.update');
 
-//    Route::delete('instructor/delete/{id}', [CourseController::class,'delete'])->name('instructor.delete');
+    Route::delete('instructor/delete/{id}', [InstructorController::class,'delete'])->name('instructor.delete');
     Route::resource('instructor', InstructorController::class)->parameters(['instructor' => 'id']);
-//    Route::post('instructor/update/{id}', [CourseController::class,'update'])->name('instructor.update');
+    Route::post('instructor/update/{id}', [InstructorController::class,'update'])->name('instructor.update');
 
     //    Route::delete('instructor/delete/{id}', [CourseController::class,'delete'])->name('instructor.delete');
     Route::resource('user', UserController::class)->parameters(['user' => 'id']);
 //    Route::post('instructor/update/{id}', [CourseController::class,'update'])->name('instructor.update');
+
+
+    Route::resource('coverarea', CoverAreaController::class)->parameters(['coverarea' => 'id']);
+
+
+    Route::resource('showpage', ShowPageController::class)->parameters(['showpage' => 'id']);
+
 
 
 

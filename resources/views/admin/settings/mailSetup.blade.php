@@ -61,54 +61,65 @@
                                             <div class="row" class="row d-none" id="smtp-prop">
                                                 <div class="col-md-12">
                                                     <p class="text-danger ml-10">All fields are required</p>
-                                                    <div class="form-group">
-                                                        <label for="mail_transport">Mail Driver </label>
-                                                        <input type="text" id="mail_transport" class="form-control" placeholder="Mail Driver"
-                                                               value="" name="mail_transport"
-                                                               required >
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_host">Mail Host</label>
-                                                        <input type="text" id="mail_host" class="form-control"
-                                                               placeholder="Mail Host" name="mail_host" value=""
-                                                               required >
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_port">Mail Port </label>
-                                                        <input type="number" id="mail_port" class="form-control phone" placeholder="Mail Port"
-                                                               value="" name="mail_port"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_encryption">Mail Encryption</label>
-                                                        <input type="text" id="mail_encryption" class="form-control"
-                                                               placeholder="Mail Encryption" name="mail_encryption" value=""
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_username">Mail Username</label>
-                                                        <input type="text" id="mail_username" class="form-control" placeholder="Mail Username"
-                                                               value="" name="mail_username"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_password">Mail Password</label>
-                                                        <input type="text" id="mail_password" class="form-control"
-                                                               placeholder="Mail Password" name="mail_password" value=""
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_from_name">Mail From Name </label>
-                                                        <input type="text" id="mail_from_name" class="form-control" placeholder="Mail From Name"
-                                                               value="" name="mail_from_name"
-                                                               required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="mail_from_address">Mail From Address</label>
-                                                        <input type="email" id="mail_from_address" class="form-control"
-                                                               placeholder="Mail From Address" name="mail_from_address" value=""
-                                                               required>
-                                                    </div>
+                                                    @if ($emailSetup)
+                                                        @php
+                                                            $emailSetupData = json_decode($emailSetup->value, true);
+                                                        @endphp
+
+                                                        <script>
+                                                            // Set the emailSetupData object using PHP values
+                                                            var emailSetupData = {!! json_encode($emailSetupData) !!};
+                                                        </script>
+
+                                                        <div class="form-group">
+                                                            <label for="mail_transport">Mail Driver </label>
+                                                            <input type="text" id="mail_transport" class="form-control" placeholder="Mail Driver"
+                                                                   value="{{ $emailSetupData['mail_transport'] ?? '' }}" name="mail_transport"
+                                                                   required >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_host">Mail Host</label>
+                                                            <input type="text" id="mail_host" class="form-control"
+                                                                   placeholder="Mail Host" name="mail_host" value="{{ $emailSetupData['mail_host'] ?? '' }}"
+                                                                   required >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_port">Mail Port </label>
+                                                            <input type="number" id="mail_port" class="form-control phone" placeholder="Mail Port"
+                                                                   value="{{ $emailSetupData['mail_port'] ?? '' }}" name="mail_port"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_encryption">Mail Encryption</label>
+                                                            <input type="text" id="mail_encryption" class="form-control"
+                                                                   placeholder="Mail Encryption" name="mail_encryption" value="{{ $emailSetupData['mail_encryption'] ?? '' }}"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_username">Mail Username</label>
+                                                            <input type="text" id="mail_username" class="form-control" placeholder="Mail Username"
+                                                                   value="{{ $emailSetupData['mail_username'] ?? '' }}" name="mail_username"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_password">Mail Password</label>
+                                                            <input type="text" id="mail_password" class="form-control"
+                                                                   placeholder="Mail Password" name="mail_password" value="{{ $emailSetupData['mail_password'] ?? '' }}"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_from_name">Mail From Name </label>
+                                                            <input type="text" id="mail_from_name" class="form-control" placeholder="Mail From Name"
+                                                                   value="{{ $emailSetupData['mail_from_name'] ?? '' }}" name="mail_from_name"
+                                                                   required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="mail_from_address">Mail From Address</label>
+                                                            <input type="email" id="mail_from_address" class="form-control"
+                                                                   placeholder="Mail From Address" name="mail_from_address" value="{{ $emailSetupData['mail_from_address'] ?? '' }}"
+                                                                   required>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

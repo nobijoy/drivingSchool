@@ -62,6 +62,22 @@
                 </ul>
             </li>
 
+            <li class=" nav-item">
+                <a href="">
+                    <i class="feather icon-users"></i><span class="menu-title">Manage Website</span>
+                </a>
+                <ul class="menu-content">
+                    <li @if($url == 'coverarea.index') class="active"  @endif>
+                        <a href="{{route('coverarea.index')}}">Cover Area</a>
+                    </li>
+                </ul>
+                <ul class="menu-content">
+                    <li @if($url == 'showpage.index') class="active"  @endif>
+                        <a href="{{route('showpage.index')}}">FAQ Section</a>
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     </div>
 </div>
